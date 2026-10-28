@@ -17,12 +17,12 @@ function Controlled() {
           setForm((prev)=>({...prev,[e.target.name]:e.target.value}))
         }}/>
 
-        <label htmlFor="Email">: </label>
+        <label htmlFor="">Email: </label>
         <input type="text" name="Email" id="Email" onChange={(e)=>{
           setForm((prev)=>({...prev,[e.target.name]:e.target.value}))
         }} />
 
-        <label htmlFor="Password">: </label>
+        <label htmlFor="">Password: </label>
         <input type="Password" name="Password" id="Password" onChange={(e)=>{
           setForm((prev)=>({...prev,[e.target.name]:e.target.value}))
         }} />
