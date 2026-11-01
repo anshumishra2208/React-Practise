@@ -5,6 +5,7 @@ import App from './App.jsx'
 // import { ThemeProvider } from './Context/ThemeContext.jsx';
 // import { ContextProvider } from './Context/UserContext.jsx';
 import { CartContext } from './Context/Cart.jsx';
+import { LanguageProvider } from './Context/Language.jsx';
 
 // export const UserContext = createContext(null);
 // let username = "anshu"
@@ -23,7 +24,13 @@ createRoot(document.getElementById('root')).render(
 //   <App/>
 // </ContextProvider> */}
 
-<CartContext>
+// {/* <CartContext>
+//   <App/>
+// </CartContext> */}
+
+<LanguageProvider>
   <App/>
-</CartContext>
+</LanguageProvider>
+
+
 )
