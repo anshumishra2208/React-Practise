@@ -11,5 +11,3 @@ function Profile({name,age}) {
 }
 
 export let AuthProfile = withAuth(Profile)
-
-// export default Profile

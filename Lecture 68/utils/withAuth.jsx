@@ -2,7 +2,7 @@ import React from 'react'
 
 function withAuth(Component) {
     return function ({ name, age }) {
-        let isLoggedIn = false
+        let isLoggedIn = true
         if (isLoggedIn) {
             return <Component name={name} age={19} />
         }

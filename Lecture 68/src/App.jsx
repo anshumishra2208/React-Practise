@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import { AuthProfile } from './Components/Profile'
 import useCounter from '../hooks/useCounter'
+import { AuthDashboard } from './Components/Dashboard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <AuthProfile name={"anshu"} age={19}/>
+    <AuthDashboard name={"anshu mishra"}/>
 
     <button onClick={increment}>click to increase </button><br />
     <p>{counter}</p>
