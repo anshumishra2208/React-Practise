@@ -1,11 +1,25 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import Children from "./Components/Children";
 
 
 function App() {
 
   const [counter, setCounter] = useState(0);
 
-   function totalSum() {
+  // function printHello(){
+  //   console.log("hello hii");
+  // }
+
+  let memoizedFunction = useCallback((function printHello() {
+    console.log("hello hii");
+  }), [])
+
+  let obj = {
+    // counter,
+    memoizedFunction
+  }
+
+  function totalSum() {
     let sum = 0;
     for (let i = 0; i <= 1000000000; i++) {
       sum += i;
@@ -13,9 +27,9 @@ function App() {
     return sum;
   }
 
-  let value = useMemo(()=>{
+  let value = useMemo(() => {
     return totalSum()
-  },[])
+  }, [])
 
 
   return (
@@ -25,6 +39,8 @@ function App() {
         setCounter((prev) => prev + 1)
       }}>Click to increase</button>
       <p>{value}</p>
+      <Children {...obj} />
+
 
 
     </>
